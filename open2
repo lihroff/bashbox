@@ -6,9 +6,8 @@
  * By default, open2 set files as working directory
  *
  */
+const [_name, args = ["."]] = process.argv.slice(2);
 
-const [name, args = ["."]] = process.argv.slice(2);
-
-console.log("open2");
+console.log(_name);
 
 await $`open ${args.join(" ")}`;
